@@ -15,7 +15,7 @@ public class ParticleShootingLogic : MonoBehaviour, IGunType
 
 
     public int numBullets = 3;                // htedrab kam bullet fl mara
-    Vector3 disposition = new Vector3(0f,0.3f,0f);
+    Vector3 disposition = new Vector3(0f,5f,0f);
     // momkn a3mlha for loop ez gowa el Shoot(), kol mara y-spawn wa7da fy makan shifted 3n el ableeha b value mo3yna / 3adadhom
     // kda kol ma 3adadhom yzeed, el value dyh ht2el, l2n el denominator b2a akbar
     // kinda like, float value = 18/NumBullets mthln;
