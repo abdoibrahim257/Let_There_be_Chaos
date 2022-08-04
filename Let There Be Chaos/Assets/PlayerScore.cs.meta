@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b7245e0acef94f04a85a30ed8e3a75da
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gunVars: {instanceID: 0}
+  - playerVars: {instanceID: 0}
+  - rocket: {fileID: 1269905775500233548, guid: 17ca24aa2761127468e16a252498bc25, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
