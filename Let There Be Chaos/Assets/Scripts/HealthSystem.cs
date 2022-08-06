@@ -6,6 +6,8 @@ public class HealthSystem : MonoBehaviour
 {
     public float health = 100f;
     public float maxHealth = 100f;
+    public GameObject DestroyEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class HealthSystem : MonoBehaviour
             else
             {
                 Destroy(gameObject);
+                GameObject effect = Instantiate(DestroyEffect, transform.position, Quaternion.identity);
             }
         }
     }
