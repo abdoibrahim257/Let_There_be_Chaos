@@ -25,7 +25,7 @@ public class KawShoot : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 // void Shoot();
-                customEvent.Invoke();       // To invoke the event(s)
+                customEvent?.Invoke();       // To invoke the event(s)
                 // Shoot();
                 nextAttackTime = Time.time + 1f / attackRate;
             }

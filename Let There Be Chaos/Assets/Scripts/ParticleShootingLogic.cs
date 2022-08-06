@@ -63,4 +63,5 @@ public class ParticleShootingLogic : MonoBehaviour, IGunType
         }
             
     }
+    public void DontShoot() {}
 }

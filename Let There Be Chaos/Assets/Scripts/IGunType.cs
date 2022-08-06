@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IGunType
 {
     void Shoot();
+    void DontShoot();
 }
