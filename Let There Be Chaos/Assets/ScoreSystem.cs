@@ -10,7 +10,8 @@ public class ScoreSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject.FindGameObjectWithTag("Player");
+        // get el component el 3ayzo
     }
 
     // Update is called once per frame

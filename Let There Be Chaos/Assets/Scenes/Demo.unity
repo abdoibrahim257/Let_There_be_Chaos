@@ -227,7 +227,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 584c7d32271198540a82d947f10e2200, type: 3}
   m_Color: {r: 0.32395867, g: 0.55124325, b: 0.9433962, a: 0.42745098}
   m_FlipX: 0
@@ -303,9 +303,9 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Follow: {fileID: 526511947}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 25
+    OrthographicSize: 50
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -632,7 +632,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 25
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1070,8 +1070,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672448001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3265, y: 0.1632, z: 10}
-  m_LocalScale: {x: 11.9344015, y: 9.861393, z: 1}
+  m_LocalPosition: {x: -0.082, y: -0.3258, z: 10}
+  m_LocalScale: {x: 24.109085, y: 19.641253, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   spawnedObject:
   - {fileID: 8806580850268323098, guid: dd9f8e1941200884f9f5a3dc3ea5c133, type: 3}
   - {fileID: 2046774708809347415, guid: 1ada4a8357bceb441aa09e02a1ae37e0, type: 3}
-  referenceObject: {fileID: 526511945}
+  referenceObject: {fileID: 1645773388}
   spawnRate: 1
   fireForce: 40
 --- !u!1 &1645773388

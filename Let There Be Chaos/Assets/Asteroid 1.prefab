@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5302187676664647584}
   - component: {fileID: 4896491466867013301}
   - component: {fileID: 3346288255671654934}
+  - component: {fileID: -7729673257604595022}
   m_Layer: 8
   m_Name: Asteroid 1
   m_TagString: Untagged
@@ -166,3 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   maxHealth: 15
+--- !u!114 &-7729673257604595022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806580850268323098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7cfdd515aa8734e9cfd6cba91f1fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 50
+  playerVars: {fileID: 0}
