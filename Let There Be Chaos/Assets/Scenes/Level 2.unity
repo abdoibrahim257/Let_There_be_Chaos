@@ -54903,7 +54903,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1341176, y: 1}
+    m_SensorSize: {x: 2.2548618, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -54966,7 +54966,10 @@ MonoBehaviour:
   score: 0
   gunVars: {fileID: 597523030}
   playerVars: {fileID: 1551640586}
-  weapons: []
+  weapons:
+  - {fileID: 2105045452}
+  - {fileID: 696488982}
+  - {fileID: 0}
   index: 0
   scoreIndex:
   - 1000
@@ -55262,7 +55265,6 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2

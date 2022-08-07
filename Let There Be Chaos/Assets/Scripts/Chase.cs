@@ -9,15 +9,16 @@ public class Chase : StateMachineBehaviour
     [SerializeField] public float ChaseSpeed;
     [SerializeField] public float StopChaseTimer;
     private float timer = 0;
-    //private float attacktimer = 0;
+    private float attacktimer = 0;
     [SerializeField] public float ExitDetectRadius;
+    private GunShoot Gun;
 
-    // [Header("Custom Event")]            // 3lshan ast3ml el events
-    // public UnityEvent customEvent;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        player = GameObject.FindWithTag("Player").transform;
+       Gun = animator.GetComponentInChildren<GunShoot>();
+
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -25,10 +26,11 @@ public class Chase : StateMachineBehaviour
         animator.transform.up = player.position - animator.transform.position;
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, player.position, ChaseSpeed * Time.deltaTime);
 
-        //customEvent?.Invoke();
+
+        // Gun.CallTheShots();
         
         StopChase(animator);
-        //AttackControl();
+        AttackControl();
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -51,7 +53,7 @@ public class Chase : StateMachineBehaviour
         if (timer >= StopChaseTimer)
         {
             timer = 0;
-            //attacktimer = 0;
+            attacktimer = 0;
             animator.SetBool("Chase", false);
         }
     }
@@ -59,18 +61,18 @@ public class Chase : StateMachineBehaviour
 
     void AttackControl()
     {
-        // attacktimer += Time.deltaTime;
+        attacktimer += Time.deltaTime;
 
-        // if (attacktimer >= 4)
-        // {
-        //     gunc.OnFire();
-        //     //Attack.Invoke();
-        //     Debug.Log("fire");
-        //     if (attacktimer >= 6)
-        //     {
-        //         gunc.StopFire();
-        //         attacktimer = 0;
-        //     }
-        // }
+        if (attacktimer >= 4)
+        {
+            Gun.CallTheShots();
+            //Attack.Invoke();
+            Debug.Log("fire");
+            if (attacktimer >= 6)
+            {
+                // gunc.StopFire();
+                attacktimer = 0;
+            }
+        }
     }
 }

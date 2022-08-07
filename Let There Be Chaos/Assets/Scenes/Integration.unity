@@ -427,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!1 &303435832
 GameObject:
   m_ObjectHideFlags: 0
@@ -5259,6 +5260,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> Stashed changes
 --- !u!1 &312297292
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,6 +5557,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &347436729
 GameObject:
   m_ObjectHideFlags: 0
@@ -15218,6 +15222,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> Stashed changes
 --- !u!1 &399770419
 GameObject:
   m_ObjectHideFlags: 0
@@ -69486,8 +69492,11 @@ Transform:
   - {fileID: 1862025763}
   - {fileID: 1773329282}
   - {fileID: 1342086627}
+<<<<<<< Updated upstream
   - {fileID: 1409494052}
   - {fileID: 1453288164}
+=======
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69876,6 +69885,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1086868177
 GameObject:
   m_ObjectHideFlags: 0
@@ -74708,6 +74718,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1202722557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74813,6 +74825,7 @@ Transform:
   m_Father: {fileID: 597523029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1268090107
 GameObject:
   m_ObjectHideFlags: 0
@@ -79645,6 +79658,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1342086626
 GameObject:
   m_ObjectHideFlags: 0
@@ -79670,8 +79685,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342086626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -0.0795, y: 0.2634, z: 10}
   m_LocalScale: {x: 5.626663, y: 2.7171884, z: 2.7171884}
+=======
+  m_LocalPosition: {x: -0.7817, y: 0.2634, z: 10}
+  m_LocalScale: {x: 5.386561, y: 2.7171884, z: 2.7171884}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 769668105}
@@ -79729,6 +79749,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!1 &1409494051
 GameObject:
   m_ObjectHideFlags: 0
@@ -79811,6 +79832,8 @@ Transform:
   m_Father: {fileID: 769668105}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1495993779
 GameObject:
   m_ObjectHideFlags: 0
@@ -79857,7 +79880,11 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
+<<<<<<< Updated upstream
     m_SensorSize: {x: 2.253197, y: 1}
+=======
+    m_SensorSize: {x: 2.2548618, y: 1}
+>>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -79976,7 +80003,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   gunVars: {fileID: 597523030}
+<<<<<<< Updated upstream
   playerVars: {fileID: 0}
+=======
+  playerVars: {fileID: 1551640586}
+>>>>>>> Stashed changes
   weapons:
   - {fileID: 2105045452}
   - {fileID: 696488982}
@@ -80798,8 +80829,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862025762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -0.4231, y: -0.5608, z: 10}
   m_LocalScale: {x: 5.608794, y: 2.6162388, z: 1}
+=======
+  m_LocalPosition: {x: 0.2791, y: -0.5608, z: 10}
+  m_LocalScale: {x: 5.368927, y: 2.6162388, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 769668105}
@@ -80997,6 +81033,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1948922766
 GameObject:
   m_ObjectHideFlags: 0
@@ -85829,6 +85866,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> Stashed changes
 --- !u!1 &2010524821
 GameObject:
   m_ObjectHideFlags: 0

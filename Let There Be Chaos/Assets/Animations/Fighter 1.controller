@@ -42,7 +42,19 @@ MonoBehaviour:
   ExitDetectRadius: 50
   customEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6638642913128659315, guid: f9693b5d49554bb4297c3128d667c0d7, type: 3}
+        m_TargetAssemblyTypeName: GunShoot, Assembly-CSharp
+        m_MethodName: CallTheShots
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1101 &-1379585052596242745
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
