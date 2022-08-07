@@ -404,7 +404,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.3534799, y: 1}
+    m_SensorSize: {x: 2.2548618, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -514,6 +514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   maxHealth: 15
+  DestroyEffect: {fileID: 0}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!58 &482023816
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -543,7 +545,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 500
-  playerVars: {fileID: 526511951}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +714,7 @@ GameObject:
   - component: {fileID: 526511950}
   - component: {fileID: 526511951}
   - component: {fileID: 526511952}
+  - component: {fileID: 526511953}
   m_Layer: 0
   m_Name: NormalKaw
   m_TagString: Untagged
@@ -839,6 +841,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+  DestroyEffect: {fileID: 0}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &526511951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,7 +858,12 @@ MonoBehaviour:
   score: 0
   gunVars: {fileID: 759323422}
   playerVars: {fileID: 526511952}
-  rocket: {fileID: 3481449}
+  weapons: []
+  index: 0
+  scoreIndex:
+  - 1000
+  - 500
+  - 0
 --- !u!114 &526511952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +892,22 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   attackRate: 2
+--- !u!70 &526511953
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526511945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.34904647, y: -0.246073}
+  m_Size: {x: 5.6978498, y: 1.3017964}
+  m_Direction: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1268,8 @@ MonoBehaviour:
   referenceObject: {fileID: 1645773388}
   spawnRate: 1
   fireForce: 40
+  infiniteSpawning: 0
+  numSpawnObjects: 2
 --- !u!1 &1645773388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1386,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+  DestroyEffect: {fileID: 0}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718781689
 GameObject:
   m_ObjectHideFlags: 0

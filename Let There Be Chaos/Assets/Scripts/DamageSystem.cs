@@ -35,7 +35,7 @@ public class DamageSystem : MonoBehaviour
         {
             other.transform.GetComponent<HealthSystem>().health -= damage;
             // lw hn3ml effect lel 5abta hn7oto hena
-            if (other.collider.CompareTag("Player") || other.collider.CompareTag("Enemy"))
+            if (!(other.collider.CompareTag("Player") || other.collider.CompareTag("Enemy")))   // doesn't destroy object in case it hits player or enemy
             {
                 Destroy(gameObject);
             }
