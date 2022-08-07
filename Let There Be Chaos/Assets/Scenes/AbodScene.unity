@@ -5411,11 +5411,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-<<<<<<< Updated upstream
     m_SensorSize: {x: 2.253197, y: 1}
-=======
-    m_SensorSize: {x: 2.2548618, y: 1}
->>>>>>> Stashed changes
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15230,7 +15226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 500
-<<<<<<< Updated upstream
 --- !u!1 &492382099
 GameObject:
   m_ObjectHideFlags: 0
@@ -20063,8 +20058,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
-=======
->>>>>>> Stashed changes
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -20236,7 +20229,6 @@ GameObject:
   - component: {fileID: 526511950}
   - component: {fileID: 526511951}
   - component: {fileID: 526511952}
-  - component: {fileID: 526511953}
   m_Layer: 6
   m_Name: NormalKaw
   m_TagString: Player
@@ -20414,22 +20406,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   attackRate: 1000
---- !u!70 &526511953
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526511945}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.34904647, y: -0.246073}
-  m_Size: {x: 5.6978498, y: 1.3017964}
-  m_Direction: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

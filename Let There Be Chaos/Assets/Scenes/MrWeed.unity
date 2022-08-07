@@ -1008,7 +1008,6 @@ GameObject:
   - component: {fileID: 526511950}
   - component: {fileID: 526511951}
   - component: {fileID: 526511952}
-  - component: {fileID: 526511953}
   m_Layer: 6
   m_Name: NormalKaw
   m_TagString: Player
@@ -1188,22 +1187,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   attackRate: 2
---- !u!70 &526511953
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526511945}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.34904647, y: -0.246073}
-  m_Size: {x: 5.6978498, y: 1.3017964}
-  m_Direction: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,7 +2135,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776150303}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

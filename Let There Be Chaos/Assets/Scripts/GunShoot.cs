@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GunShoot : MonoBehaviour
 {
-    public float attackRate = 2f;       // y2dr y3ml kam attack fl sanya
-    
-    float nextAttackTime = 0f;
     public GameObject shotType;
     // Start is called before the first frame update
     void Start()
@@ -47,10 +44,6 @@ public class GunShoot : MonoBehaviour
 
     public void CallTheShots()
     {
-        if (Time.time >= nextAttackTime)
-        {
-            StartCoroutine(GeneralShoot());
-            nextAttackTime = Time.time + 1f / attackRate;
-        }
+        StartCoroutine(GeneralShoot());
     }
 }
