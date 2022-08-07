@@ -16,6 +16,7 @@ public class Chase : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        SpriteManager.SwitchSprite("Fighter3");
        player = GameObject.FindWithTag("Player").transform;
        Gun = animator.GetComponentInChildren<GunShoot>();
 

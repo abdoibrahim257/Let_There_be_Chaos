@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b71aeb5216d8e4479a01a5cf913d6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRate: 2
   shotType: {fileID: 4900109264036945390}
 --- !u!1 &6225783343419881999
 GameObject:
@@ -153,6 +154,7 @@ GameObject:
   - component: {fileID: 6225783343419881998}
   - component: {fileID: 6225783343419881986}
   - component: {fileID: 6225783343419881987}
+  - component: {fileID: 1801569238103730352}
   m_Layer: 0
   m_Name: Fighter
   m_TagString: Untagged
@@ -280,6 +282,19 @@ MonoBehaviour:
   maxHealth: 100
   DestroyEffect: {fileID: 100002, guid: 96c2218ea92f8a04d8ae9bc8aab177df, type: 3}
   respawnPoint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801569238103730352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225783343419881999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be7eb4f1f5fee54a85082918e3884ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fighter: {fileID: 0}
 --- !u!1 &7798852067836657892
 GameObject:
   m_ObjectHideFlags: 0

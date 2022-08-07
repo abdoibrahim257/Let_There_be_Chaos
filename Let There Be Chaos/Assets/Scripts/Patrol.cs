@@ -12,6 +12,8 @@ public class Patrol : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //ex on using sprite manager
+        SpriteManager.SwitchSprite("Fighter3"); //here it can be fighter1,2,3,4 and it will switch to them
         origin = animator.transform.position;
         movespot = origin + (Random.insideUnitCircle * moveradius);
         Physics2D.queriesStartInColliders = false;
