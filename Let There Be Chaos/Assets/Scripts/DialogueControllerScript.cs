@@ -50,6 +50,8 @@ public class DialogueControllerScript : MonoBehaviour
         {
             DialogueText.text +=c;
             yield return new WaitForSeconds(DialogueSpeed);
+            if(Input.GetKeyDown(KeyCode.Space))
+                break;
         }
         index++;
     }
