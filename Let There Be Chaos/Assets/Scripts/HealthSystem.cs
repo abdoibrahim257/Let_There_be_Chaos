@@ -7,10 +7,12 @@ public class HealthSystem : MonoBehaviour
     public float health = 100f;
     public float maxHealth = 100f;
     public GameObject DestroyEffect;
+    public Vector3 respawnPoint;       // where to spawn upon death
 
     // Start is called before the first frame update
     void Start()
     {
+        respawnPoint = transform.position;
         health = maxHealth;
     }
 
@@ -22,12 +24,16 @@ public class HealthSystem : MonoBehaviour
             if (gameObject.CompareTag("Player"))        // player respawn upon death
             {
                 health = maxHealth;
-                //  yt3mlo respawn fy 7eta
+                transform.position = respawnPoint;      //  yt3mlo respawn fy 7eta
+                // momkn n2alel el score brdo lw 3ayzeen
             }
             else
             {
                 Destroy(gameObject);
-                GameObject effect = Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+                if (DestroyEffect)      // lw fy destroy effect, e3mlo instantiate
+                {
+                    GameObject effect = Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+                }
             }
         }
     }

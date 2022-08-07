@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   maxHealth: 15
+  DestroyEffect: {fileID: 0}
 --- !u!114 &-7729673257604595022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,5 +180,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7cfdd515aa8734e9cfd6cba91f1fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 50
-  playerVars: {fileID: 0}
+  score: 10

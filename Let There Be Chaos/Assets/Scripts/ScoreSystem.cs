@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour
 {
-    public float score = 50f;
-    // public GameObject player = null;
-    public PlayerScore playerVars;     // To access score variable
+    public float score = 10f;
+    private GameObject player = null;
+    private PlayerScore playerVars;     // To access score variable
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");        // kda bshawer 3l player
         // get el component el 3ayzo
+        playerVars = player.GetComponent<PlayerScore>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,6 @@ public class ScoreSystem : MonoBehaviour
     }
 
     private void OnDestroy() {
-        playerVars.score += score;
+        playerVars.score += score;      // byzwd score el object 3l player
     }
 }

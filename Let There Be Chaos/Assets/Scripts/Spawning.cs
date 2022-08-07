@@ -19,28 +19,40 @@ public class Spawning : MonoBehaviour
     private float yCoordinate;
     int counter = 0;                                // counter for the spawnedObject array, to traverse the array
     // public Camera Camera;
+    public bool infiniteSpawning = false;           // determines whether we want infinite spawning, or a certain number of objects
+    public int numSpawnObjects = 2;
 
     // Update is called once per frame
     private void Update()
     {
-        float randomX = UnityEngine.Random.Range(randomOffsetRangeStart, randomOffsetRangeEnd);
-        float randomY = UnityEngine.Random.Range(randomOffsetRangeStart, randomOffsetRangeEnd);
-        float randomAngle = UnityEngine.Random.Range(randomAngleRangeStart, randomAngleRangeEnd);
-        xCoordinate = referenceObject.transform.position.x;
-        yCoordinate = referenceObject.transform.position.y;
-        transform.position = new Vector3(xCoordinate + Offset.x + randomX, yCoordinate + Offset.y + randomY, transform.position.z);
-        transform.rotation = Quaternion.Euler(Vector3.forward * randomAngle);
-        // Vector3 spawnedRotation = new Vector3 (0f, 0f, randomAngle);
-        // Vector3 spawnedRotation = new Vector3 (45f, 0f, 0f);
-        // spawns object with camera position, offset by a certain value
-        // Quaternion.Euler(spawnedRotation)
-        if (Time.time > nextSpawn)
+        if (referenceObject && spawnedObject.Length > 0)    // lw el reference object etkasar, mt3mlsh 7aga 5las, w lw mfeesh object m7toota fl array, mt3mlsh 7aga brdo
         {
-            GameObject spawned = Instantiate(spawnedObject[counter], transform.position, Quaternion.identity);
-            spawned.GetComponent<Rigidbody2D>().AddForce(this.transform.up * fireForce, ForceMode2D.Impulse);
-            counter++;
-            counter %= spawnedObject.Length;
-            nextSpawn = Time.time + 1.0f / spawnRate;
+            float randomX = UnityEngine.Random.Range(randomOffsetRangeStart, randomOffsetRangeEnd);
+            float randomY = UnityEngine.Random.Range(randomOffsetRangeStart, randomOffsetRangeEnd);
+            float randomAngle = UnityEngine.Random.Range(randomAngleRangeStart, randomAngleRangeEnd);
+            xCoordinate = referenceObject.transform.position.x;
+            yCoordinate = referenceObject.transform.position.y;
+            transform.position = new Vector3(xCoordinate + Offset.x + randomX, yCoordinate + Offset.y + randomY, transform.position.z);
+            transform.rotation = Quaternion.Euler(Vector3.forward * randomAngle);
+            // Vector3 spawnedRotation = new Vector3 (0f, 0f, randomAngle);
+            // Vector3 spawnedRotation = new Vector3 (45f, 0f, 0f);
+            // spawns object with camera position, offset by a certain value
+            // Quaternion.Euler(spawnedRotation)
+            if (Time.time > nextSpawn)
+            {
+                if (numSpawnObjects > 0)
+                {
+                    GameObject spawned = Instantiate(spawnedObject[counter], transform.position, Quaternion.identity);
+                    spawned.GetComponent<Rigidbody2D>().AddForce(this.transform.up * fireForce, ForceMode2D.Impulse);
+                    counter++;
+                    counter %= spawnedObject.Length;
+                    if (!infiniteSpawning)
+                    {
+                        numSpawnObjects--;
+                    }
+                }
+                nextSpawn = Time.time + 1.0f / spawnRate;
+            }
         }
     }
 
