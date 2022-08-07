@@ -19,7 +19,7 @@ public class DamageSystem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         
-        if(gameObject.CompareTag("Asteroid") && other.collider.CompareTag("Player"))
+        if(gameObject.CompareTag("Asteroids") && other.collider.CompareTag("Player"))
         {
             // this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             // //impulse effect on the player
@@ -27,7 +27,7 @@ public class DamageSystem : MonoBehaviour
             hitVector = (other.gameObject.transform.position - transform.position);                     // we can alter the force of impact according to game
             // hitVector.y = 0;
             hitVector = hitVector.normalized ;
-            other.rigidbody.AddForce(hitVector * 6000 );
+            other.rigidbody.AddForce(hitVector * 10000 );
 
         }
 
@@ -35,7 +35,11 @@ public class DamageSystem : MonoBehaviour
         {
             other.transform.GetComponent<HealthSystem>().health -= damage;
             // lw hn3ml effect lel 5abta hn7oto hena
-            Destroy(gameObject);
+            if (other.collider.CompareTag("Player") || other.collider.CompareTag("Enemy"))
+            {
+                Destroy(gameObject);
+            }
+                
             // effect = Instantiate(el effect);
             // Destroy(el effect, b3d shwyt wa2t)
         }
