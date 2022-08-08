@@ -19,7 +19,7 @@ public class PlayerScore : MonoBehaviour
         // hyb2a el ta8yeer ez, msh hn8ayar 7aga 8eir tarteeb el states 7rfyn, wl if conditions bta3t el scores. ez
         Knife,           
         Rocket,
-        Gun,
+        // Gun,
         Laser,
     }
     // Start is called before the first frame update
