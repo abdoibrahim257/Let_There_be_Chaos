@@ -81618,7 +81618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerVars: {fileID: 1551640584}
-  laserSprite: {fileID: 21300000, guid: 4ffdc885a6f76164faa89acfc68fb86c, type: 3}
+  laserSprite: {fileID: 21300000, guid: cd308b52816533e4ebd5ef5fbf75caf8, type: 3}
 --- !u!114 &1940622427
 MonoBehaviour:
   m_ObjectHideFlags: 0
