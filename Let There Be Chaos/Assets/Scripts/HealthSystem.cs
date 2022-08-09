@@ -26,6 +26,11 @@ public class HealthSystem : MonoBehaviour
                 health = maxHealth;
                 transform.position = respawnPoint;      //  yt3mlo respawn fy 7eta
                 // momkn n2alel el score brdo lw 3ayzeen
+                gameObject.GetComponent<PlayerScore>().score -= 200f;
+                if (gameObject.GetComponent<PlayerScore>().score < 0)
+                {
+                    gameObject.GetComponent<PlayerScore>().score = 0f;
+                }
             }
             else
             {

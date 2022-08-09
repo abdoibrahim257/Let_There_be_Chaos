@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class DialogueControllerScript : MonoBehaviour
 {   
     public TextMeshProUGUI DialogueText;
+    // public GameObject button;
+
     public string[] Sentences;
     private int index = 0;
     public float DialogueSpeed;
 
     public Animator DialogueAnimator;
-    private bool StartDialogue = true;
+    private bool first = true;
+    // private bool StartDialogue = true;
 
+    public UnityEvent Event;
     void Start()
     {
         NextSentence();
@@ -24,14 +29,17 @@ public class DialogueControllerScript : MonoBehaviour
         //for now i will make when spacebar is pressed
         //i need to make this pop at the start of the game 
         // i need to generalize more this dialogue box in order to make it usable every were
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(first && Input.GetKeyDown(KeyCode.Space))
         {
+            first = false;
             NextSentence();
+
         }
     }
 
-    void NextSentence()
+    public void NextSentence()
     {
+        // button.SetActive(false);
         if(index <= Sentences.Length -1)
         {
             DialogueText.text = string.Empty;
@@ -40,6 +48,7 @@ public class DialogueControllerScript : MonoBehaviour
         else
         {
             DialogueText.text = string.Empty;
+            Event?.Invoke();
             DialogueAnimator.SetTrigger("Exit");
         }
     }
@@ -50,9 +59,16 @@ public class DialogueControllerScript : MonoBehaviour
         {
             DialogueText.text +=c;
             yield return new WaitForSeconds(DialogueSpeed);
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(!first && Input.GetKeyDown(KeyCode.Space))
+            {
+                first = true;
+                // Debug.Log("sh8ala");
                 break;
+            }
         }
+        DialogueText.text = Sentences[index];
+        first = true;
         index++;
+        // button.SetActive(true);
     }
 }

@@ -102,7 +102,7 @@ public class Laser : MonoBehaviour, IGunType
                 //apply damage
                 if(hit1.collider.GetComponent<HealthSystem>())
                 {
-                    hit1.collider.GetComponent<HealthSystem>().health-=0.35f;
+                    hit1.collider.GetComponent<HealthSystem>().health-=0.7f;
                 }
             }
 

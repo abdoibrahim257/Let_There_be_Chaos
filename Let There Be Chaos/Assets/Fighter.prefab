@@ -44,7 +44,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbb06012365040449a020110672af61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1269905775500233548, guid: 17ca24aa2761127468e16a252498bc25, type: 3}
+  bulletPrefab: {fileID: 1269905775500233548, guid: 8326a6a212e09c247941774c76487318, type: 3}
+  bulletForce: 90
+  numBullets: 2
+--- !u!1 &4258461428299973497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4718983743269299699}
+  - component: {fileID: 2684979794908641087}
+  m_Layer: 6
+  m_Name: SpaceShipFire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4718983743269299699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258461428299973497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4518028849299351366}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2684979794908641087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258461428299973497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbb06012365040449a020110672af61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1269905775500233548, guid: cbfaad210d2fa8f408fcafc2dfbd3ffb, type: 3}
   bulletForce: 90
   numBullets: 2
 --- !u!1 &4900109264036945390
@@ -119,7 +166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5484698709898572412}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -140,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 2
-  shotType: {fileID: 4900109264036945390}
+  shotType: {fileID: 4258461428299973497}
 --- !u!1 &6225783343419881999
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +202,8 @@ GameObject:
   - component: {fileID: 6225783343419881986}
   - component: {fileID: 6225783343419881987}
   - component: {fileID: 1801569238103730352}
-  m_Layer: 0
+  - component: {fileID: 7789072354362735511}
+  m_Layer: 7
   m_Name: Fighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +266,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 8d5f697c999643441bb417d834c597de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -294,6 +342,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be7eb4f1f5fee54a85082918e3884ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7789072354362735511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225783343419881999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7cfdd515aa8734e9cfd6cba91f1fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 50
 --- !u!1 &7798852067836657892
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +385,7 @@ Transform:
   m_Children:
   - {fileID: 7820215181768456391}
   - {fileID: 1271031421466289619}
+  - {fileID: 4718983743269299699}
   m_Father: {fileID: 2515318477309954579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

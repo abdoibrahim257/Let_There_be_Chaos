@@ -12,7 +12,7 @@ public class CheckPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnPoint = gameObject.transform.position;       // el respawn point btb2a makan el check point
+        // respawnPoint = gameObject.transform.position;       // el respawn point btb2a makan el check point
     }
 
     // Update is called once per frame
@@ -25,7 +25,8 @@ public class CheckPoint : MonoBehaviour
     {
        if (firstTime && obj.gameObject.CompareTag("Player"))
        {
-            firstTime = false;          // 3lshan my3adeesh 3la nafs el checkpoint mrtein
+            respawnPoint = obj.transform.position;                              // el makan elly el player kan wa2ef fyh lama da5al el radius
+            firstTime = false;                                                  // 3lshan my3adeesh 3la nafs el checkpoint mrtein
             obj.GetComponent<HealthSystem>().respawnPoint = respawnPoint;       // changes respawning point of player
        }
     }
