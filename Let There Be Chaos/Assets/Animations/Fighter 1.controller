@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!114 &-8679046489860804286
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1101 &-8604097190409617988
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1101 &-5226886803787184219
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1101 &-4012987343790501629
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1102 &-2414282160310365223
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1101 &-827567731796715918
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -876,13 +876,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Planet
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 10
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1101 &2513800861449919857
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1102 &3186258562348652226
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ed100d8de56994f9f57cae42169d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseSpeed: 35
+  ChaseSpeed: 30
   StopChaseTimer: 4
   ExitDetectRadius: 50
 --- !u!1101 &5326256652207135385
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de63e34b46a98f44a3c64766f325df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 30
+  PatrolSpeed: 20
   origin: {x: 0, y: 0}
   moveradius: 50
   DetectRadius: 70

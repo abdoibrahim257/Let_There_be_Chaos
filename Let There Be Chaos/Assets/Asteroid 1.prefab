@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SecondsToDestroy: 10
+  DestroyEffect: {fileID: 100002, guid: 96c2218ea92f8a04d8ae9bc8aab177df, type: 3}
 --- !u!114 &4896491466867013301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   maxHealth: 15
-  DestroyEffect: {fileID: 0}
+  DestroyEffect: {fileID: 100002, guid: 96c2218ea92f8a04d8ae9bc8aab177df, type: 3}
   respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &-7729673257604595022
 MonoBehaviour:

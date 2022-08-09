@@ -34,6 +34,10 @@ public class HealthSystem : MonoBehaviour
             }
             else
             {
+                if (gameObject.CompareTag("Enemy"))
+                {
+                    gameObject.transform.parent.GetComponent<Planet>().counter--;
+                }
                 Destroy(gameObject);
                 if (DestroyEffect)      // lw fy destroy effect, e3mlo instantiate
                 {

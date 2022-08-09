@@ -12,20 +12,35 @@ public class Chase : StateMachineBehaviour
     private float attacktimer = 0;
     [SerializeField] public float ExitDetectRadius;
     private GunShoot Gun;
+    private int randomdirection;
+    private float randomspeed;
+    private int[] arr = {-1, 1};
 
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         SpriteManager.SwitchSprite("Fighter3");
-       player = GameObject.FindWithTag("Player").transform;
-       Gun = animator.GetComponentInChildren<GunShoot>();
+        player = GameObject.FindWithTag("Player").transform;
+        Gun = animator.GetComponentInChildren<GunShoot>();
+
+        randomspeed = Random.Range(30f, 100f);
+        randomdirection = Random.Range(0,2);
 
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.transform.up = player.position - animator.transform.position;
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, player.position, ChaseSpeed * Time.deltaTime);
+
+        if (Vector2.Distance(player.position, animator.transform.position) > 30)
+        {
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, player.position, ChaseSpeed * Time.deltaTime);
+        }
+        else
+        {
+            animator.transform.RotateAround(player.position, new Vector3(0, 0, 1), arr[randomdirection] * randomspeed * Time.deltaTime);
+        }
+        Debug.Log(Vector2.Distance(player.position, animator.transform.position));
 
         
         // Gun.CallTheShots();

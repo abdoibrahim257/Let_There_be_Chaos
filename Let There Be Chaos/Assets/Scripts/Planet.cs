@@ -12,6 +12,8 @@ public class Planet : MonoBehaviour
     public float SpawnCooldown = 5;
     public float DetectRadius = 400;
     public float SpawnRadius = 300;
+    public float MaxEnemies = 5;
+    public float counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +27,12 @@ public class Planet : MonoBehaviour
         spawntimer += Time.deltaTime;
 
         Collider2D hit = Physics2D.OverlapCircle(transform.position, DetectRadius, LayerMask.GetMask("Kaw"));
-        if (hit && spawntimer >= SpawnCooldown)
+        if (hit && spawntimer >= SpawnCooldown && counter < MaxEnemies)
         {
+            counter++;
             spawnspot = origin + (Random.insideUnitCircle * SpawnRadius);
-            GameObject spawn = Instantiate(spawnobj, spawnspot, Quaternion.identity, transform);
-
+            GameObject spawn = Instantiate(spawnobj, spawnspot, Quaternion.identity);
+            spawn.transform.SetParent(transform, true);
             spawntimer = 0;
         }
     }
