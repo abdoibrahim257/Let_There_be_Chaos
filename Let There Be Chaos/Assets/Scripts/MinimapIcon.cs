@@ -16,7 +16,7 @@ namespace Minimap
 
         private void Minimap_OnZoomChanged(object sender, System.EventArgs e)
         {
-            // transform.localScale = baseScale * MinimapClass.GetZoom() / 10f;
+            // transform.localScale = baseScale * MinimapClass.GetZoom() / 1800f;
             // dh elly by-scale el 7aga upon zooming in/out, bs msh 3aref a3mlo fine-tuning
             // rakam 180 dh msh zabet, w grbt arkam tanya kteer brdo
             // 8albn h5ly kol el sprites bta3t el MiniMapIcon nafs el 7ag w 5las

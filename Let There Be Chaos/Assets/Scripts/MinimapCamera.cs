@@ -11,9 +11,9 @@ namespace Minimap
         public static event EventHandler OnZoomChanged;
         private static MinimapCamera instance;
 
-        private const float ZOOM_CHANGE_AMOUNT = 100f;
-        private const float ZOOM_MIN = 50f;
-        private const float ZOOM_MAX = 3000f;
+        private const float ZOOM_CHANGE_AMOUNT = 2000f;
+        private const float ZOOM_MIN = 2500f;
+        private const float ZOOM_MAX = 4500f;
         private Camera minimapCamera;
         private float zoom;
 
