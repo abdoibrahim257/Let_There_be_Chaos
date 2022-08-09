@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawning : MonoBehaviour
 {
@@ -21,6 +22,16 @@ public class Spawning : MonoBehaviour
     // public Camera Camera;
     public bool infiniteSpawning = false;           // determines whether we want infinite spawning, or a certain number of objects
     public int numSpawnObjects = 2;
+
+    public UnityEvent onEnd;
+    private bool firstTime = true;
+    private float AfterSpawn;
+
+
+    void Start()
+    {
+        AfterSpawn = numSpawnObjects / spawnRate;   
+    }
 
     // Update is called once per frame
     private void Update()
@@ -54,16 +65,22 @@ public class Spawning : MonoBehaviour
                 nextSpawn = Time.time + 1.0f / spawnRate;
             }
         }
+        if( numSpawnObjects <=0 && firstTime) 
+        {
+            if(Time.time > AfterSpawn + 10f && referenceObject.GetComponent<HealthSystem>().health > 0)
+            {
+                onEnd?.Invoke();
+                referenceObject.GetComponent<HealthSystem>().enabled = false;
+                firstTime = false;
+            }
+        }
     }
 
     
     
     
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  
 
    
    

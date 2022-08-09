@@ -33,7 +33,6 @@ public class DialogueControllerScript : MonoBehaviour
         {
             first = false;
             NextSentence();
-
         }
     }
 
@@ -48,8 +47,9 @@ public class DialogueControllerScript : MonoBehaviour
         else
         {
             DialogueText.text = string.Empty;
-            Event?.Invoke();
             DialogueAnimator.SetTrigger("Exit");
+            Event?.Invoke();
+            Destroy(gameObject);
         }
     }
 
