@@ -32,12 +32,13 @@ public class HealthSystem : MonoBehaviour
                     gameObject.GetComponent<PlayerScore>().score = 0f;
                 }
             }
-            else
+            else    // ay 7aga 8eir el player
             {
                 if (gameObject.CompareTag("Enemy"))
                 {
                     gameObject.transform.parent.GetComponent<Planet>().counter--;
                 }
+                // if (gameObject.CompareTag("Planet")) // lw 3ayzeen kol ma planet mo3yn ytksr, y3ml instantiate lel stone
                 Destroy(gameObject);
                 if (DestroyEffect)      // lw fy destroy effect, e3mlo instantiate
                 {
