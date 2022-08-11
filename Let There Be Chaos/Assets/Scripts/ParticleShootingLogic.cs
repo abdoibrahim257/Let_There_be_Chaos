@@ -54,7 +54,7 @@ public class ParticleShootingLogic : MonoBehaviour, IGunType
             GameObject bullet = Instantiate(bulletPrefab, this.GetComponent<Transform>().position + (sign * i * disposition / numBullets), this.GetComponent<Transform>().rotation);
             // bn3ml object mn el bulletPrefab el 7atenaha, fl position dh, bl rotation dyh
             // w bn5azeno fy variable
-            
+            bullet.GetComponent<AudioSource>()?.Play();
             // bs e7na 3ayzeen n-access el rigidbody bta3 el bullet, fa hnst3ml getcomponent
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();    // bn5azen el rigidbody
             // hndeelo force b2a

@@ -15,10 +15,14 @@ public class Planet : MonoBehaviour
     public float MaxEnemies = 5;
     public float counter = 0;
 
+    private int random;
+    private float[] arr;
+
     // Start is called before the first frame update
     void Start()
     {
         origin = transform.position;
+        arr = new float[] {20, SpawnRadius};
     }
 
     // Update is called once per frame
@@ -29,8 +33,9 @@ public class Planet : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, DetectRadius, LayerMask.GetMask("Kaw"));
         if (hit && spawntimer >= SpawnCooldown && counter < MaxEnemies)
         {
+            random = Random.Range(0,2);
             counter++;
-            spawnspot = origin + (Random.insideUnitCircle * SpawnRadius);
+            spawnspot = origin + (Random.insideUnitCircle * arr[random]);
             GameObject spawn = Instantiate(spawnobj, spawnspot, Quaternion.identity);
             spawn.transform.SetParent(transform, true);
             spawntimer = 0;
