@@ -6,6 +6,9 @@ public class CowMovement : MonoBehaviour
 {
     public Camera sceneCamera;
     public float speed = 0f;
+    private float SPEED_CHANGE_AMOUNT = 120f;
+    private float MIN_SPEED = 50f;
+    private float MAX_SPEED = 550f;
     public Rigidbody2D rigidBody;
     private Vector2 moveDirection, mousePosition;
     // Weapon curWeapon;
@@ -32,14 +35,28 @@ public class CowMovement : MonoBehaviour
         //to get mouse position
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
         //Switching with gun cntroller
-        // if(Input.GetMouseButtonDown(0))
-        // {
-        //     curWeapon.Shoot();
-        // }
-        // else if(Input.GetMouseButtonUp(0))
-        // {
-        //     curWeapon.DontShoot();
-        // }
+        
+        // Changing player speed
+        if (Input.GetKeyDown(KeyCode.H))    // Decrease Speed
+        {
+            speed -= SPEED_CHANGE_AMOUNT;
+            if (speed < MIN_SPEED)
+            {
+                speed = MIN_SPEED;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.J))    // Resets speed
+        {
+            speed = 50f;
+        }
+        else if (Input.GetKeyDown(KeyCode.K))    // Increase Speed
+        {
+            speed += SPEED_CHANGE_AMOUNT;
+            if (speed > MAX_SPEED)
+            {
+                speed = MAX_SPEED;
+            }
+        }
     }
     void move()
     {
