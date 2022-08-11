@@ -24,6 +24,7 @@ public class PlanetsManager : MonoBehaviour
         if (alsoFirstTime && !transform.Find("Mercury") && !transform.Find("Venus") && !transform.Find("Mars") && !transform.Find("Jupiter") && !transform.Find("Saturn") && !transform.Find("Uranus") && !transform.Find("Neptune") && !transform.Find("Pluto"))
         {
             alsoFirstTime = false;
+            transform.Find("Earth").GetComponent<HealthSystem>().health = transform.Find("Earth").GetComponent<HealthSystem>().maxHealth;
             transform.Find("Earth").GetComponent<HealthSystem>().enabled = true;
             Missing2?.Invoke();
         }

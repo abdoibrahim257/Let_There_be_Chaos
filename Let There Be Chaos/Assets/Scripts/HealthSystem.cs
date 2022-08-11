@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;          // added to control scene management
 
 public class HealthSystem : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class HealthSystem : MonoBehaviour
     {
         if (health <= 0)
         {
+            if (gameObject.CompareTag("GoodEarth"))     // the earth that needs to be protected from asteroids
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   // hy3eed el scene
+                Destroy(gameObject);
+            }
             if (gameObject.CompareTag("Player"))        // player respawn upon death
             {
                 health = maxHealth;

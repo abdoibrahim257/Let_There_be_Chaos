@@ -8,6 +8,7 @@ TagManager:
   - 'Asteroid '
   - Asteroids
   - Enemy
+  - GoodEarth
   layers:
   - Default
   - TransparentFX

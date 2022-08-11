@@ -170,6 +170,11 @@ MonoBehaviour:
   maxHealth: 20
   DestroyEffect: {fileID: 100002, guid: 96c2218ea92f8a04d8ae9bc8aab177df, type: 3}
   respawnPoint: {x: 0, y: 0, z: 0}
+  cameraShakeIntensity: 0
+  cinemachineShakeDuration: 0
+  onPlanetDesttuction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5274212684572377082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,4 +187,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7cfdd515aa8734e9cfd6cba91f1fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 10
+  score: 40

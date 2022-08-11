@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;          // added to control scene management
 
 public class StonePowerMeter : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class StonePowerMeter : MonoBehaviour
             // hngeblo dialogue box, w n5leeh yerga3 bl zaman le abl ma ykasar el level
             // hyroo7 ykasar el asteroid bl nuke bta3o xD w yenkez kawkab el 2ard abl ma 
             // Kaw el so8yr yetla3 mn el 2ard
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // hyen2elo lel scene el 2a5eer
         }
     }
     public void AddStone()

@@ -71,9 +71,14 @@ public class Spawning : MonoBehaviour
             {
                 onEnd?.Invoke();
                 referenceObject.GetComponent<HealthSystem>().enabled = false;
+                referenceObject.tag = "Untagged";
                 firstTime = false;
             }
         }
+        // if (referenceObject && referenceObject.GetComponent<HealthSystem>().health <= 0)    // y3ny earth etkasar
+        // {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   // hy3eed el scene
+        // }
     }
 
     

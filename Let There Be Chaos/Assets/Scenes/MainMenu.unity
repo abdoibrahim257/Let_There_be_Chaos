@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f187e09a0c0524da6f841d47c2ead1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 240, y: -30}
+  Offset: {x: 200, y: -30}
   randomOffsetRangeStart: 0
   randomOffsetRangeEnd: 130
   randomAngleRangeStart: 85
