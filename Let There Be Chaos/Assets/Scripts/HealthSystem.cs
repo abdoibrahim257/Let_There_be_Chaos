@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class HealthSystem : MonoBehaviour
     public float maxHealth = 100f;
     public GameObject DestroyEffect;
     public Vector3 respawnPoint;       // where to spawn upon death
+    public float cameraShakeIntensity = 0;
+    public float cinemachineShakeDuration = 0;
+
+    public UnityEvent<float, float> onPlanetDesttuction;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +44,7 @@ public class HealthSystem : MonoBehaviour
                     gameObject.transform.parent.GetComponent<Planet>().counter--;
                 }
                 // if (gameObject.CompareTag("Planet")) // lw 3ayzeen kol ma planet mo3yn ytksr, y3ml instantiate lel stone
+                onPlanetDesttuction?.Invoke(cameraShakeIntensity, cinemachineShakeDuration);
                 Destroy(gameObject);
                 if (DestroyEffect)      // lw fy destroy effect, e3mlo instantiate
                 {
