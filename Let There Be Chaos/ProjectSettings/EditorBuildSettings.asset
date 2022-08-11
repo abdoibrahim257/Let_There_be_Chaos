@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalIntegration.unity
     guid: dfb8cfdb6de3a8b4d97f8083977426ea
+  - enabled: 1
+    path: Assets/Scenes/TimeTravel.unity
+    guid: d0cd79866a8c27b448879d3799c36580
   m_configObjects: {}
