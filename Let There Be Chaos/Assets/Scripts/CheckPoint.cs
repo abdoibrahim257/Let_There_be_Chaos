@@ -39,7 +39,10 @@ public class CheckPoint : MonoBehaviour
             RegionBox.text =  parent.name + " Atmosphere";
             regionBoxAnimator.SetTrigger("pop");
             firstTime2 = false;
+            Camera.main.GetComponent<AudioSource>().Stop();
+            gameObject.GetComponentInParent<AudioSource>().Play();
        }
+
     }
     private void OnTriggerExit2D(Collider2D other) 
     {
@@ -49,6 +52,9 @@ public class CheckPoint : MonoBehaviour
             RegionBox.text = "Outer Space";
             regionBoxAnimator.SetTrigger("pop");
             firstTime2 = true;
+            Camera.main.GetComponent<AudioSource>().Play();
+            gameObject.GetComponentInParent<AudioSource>().Stop();
         }
+
     }
 }

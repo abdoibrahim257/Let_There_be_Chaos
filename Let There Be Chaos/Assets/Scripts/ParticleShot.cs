@@ -26,13 +26,20 @@ public class ParticleShot : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
+        Destroy(gameObject);    // bn3ml destroy lel bullet
+    }
+
+    void OnDestroy()
+    {
+        Quaternion r;
+        r = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z - 90);
+
         if (hitEffect)
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            GameObject effect = Instantiate(hitEffect, transform.position, r);
+            effect?.GetComponent<AudioSource>()?.Play();
             // bn-instantiate el hit effect, w bn3mlo store fy object, 3lshan n3mlo destroy b3deeha
             Destroy(effect, 2f);    // bn3ml destroy bs b3deeha b 0.41 seconds
         }
-        Destroy(gameObject);    // bn3ml destroy lel bullet
-
     }
 }

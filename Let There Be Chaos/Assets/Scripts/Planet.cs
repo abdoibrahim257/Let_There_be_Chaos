@@ -41,4 +41,9 @@ public class Planet : MonoBehaviour
             spawntimer = 0;
         }
     }
+
+    void OnDestroy()
+    {
+        GameObject.FindWithTag("Player").GetComponent<AudioSource>().Play();
+    }
 }

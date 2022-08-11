@@ -26,6 +26,8 @@ public class Chase : StateMachineBehaviour
         randomspeed = Random.Range(30f, 100f);
         randomdirection = Random.Range(0,2);
 
+        animator.GetComponents<AudioSource>()[0].Play();
+
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -51,7 +53,7 @@ public class Chase : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       
+       animator.GetComponents<AudioSource>()[0].Stop();
     }
 
     void StopChase(Animator animator)

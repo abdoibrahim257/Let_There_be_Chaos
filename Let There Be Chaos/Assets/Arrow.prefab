@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0bdd7851974d04a86fde3a7e8a8df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 3799031013317796255, guid: 9cf0af9f2032d0a44afdb222dbaec940, type: 3}
+  hitEffect: {fileID: 0}
   SecondsToDestroy: 10
 --- !u!114 &2560030481272290466
 MonoBehaviour:
@@ -173,9 +173,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: ee89a0d87a7e62641ac5b8943bf2f752, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

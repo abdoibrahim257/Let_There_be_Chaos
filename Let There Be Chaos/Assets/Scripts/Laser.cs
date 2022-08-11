@@ -70,8 +70,9 @@ public class Laser : MonoBehaviour, IGunType
             {
                 lineRenderer1.SetPosition(1, hit1.point);
                 //playe animation of particle system
-                LaserImpact1.GetComponent<ParticleSystem>().Play();
-                LaserImpact1.transform.position = lineRenderer1.GetPosition(1);
+                // LaserImpact1.GetComponent<ParticleSystem>().Play();
+                // LaserImpact1.transform.position = lineRenderer1.GetPosition(1);
+                GameObject effect = Instantiate(LaserImpact1, lineRenderer1.GetPosition(1), Quaternion.identity);
                 //apply damage
                 if(hit1.collider.GetComponent<HealthSystem>())
                 {
@@ -82,8 +83,9 @@ public class Laser : MonoBehaviour, IGunType
             {
                 lineRenderer2.SetPosition(1,hit2.point);
                 //play the animation of particle hit
-                LaserImpact2.GetComponent<ParticleSystem>().Play();
-                LaserImpact2.transform.position = lineRenderer2.GetPosition(1);
+                // LaserImpact2.GetComponent<ParticleSystem>().Play();
+                // LaserImpact2.transform.position = lineRenderer2.GetPosition(1);
+                GameObject effect = Instantiate(LaserImpact1, lineRenderer2.GetPosition(1), Quaternion.identity);
                 //apply damage
                 if(hit2.collider.GetComponent<HealthSystem>())
                 {
@@ -95,10 +97,13 @@ public class Laser : MonoBehaviour, IGunType
                 lineRenderer1.SetPosition(1, hit1.point);
                 lineRenderer2.SetPosition(1,hit2.point);
                 //playe both line renderer animation
-                LaserImpact1.GetComponent<ParticleSystem>().Play();
-                LaserImpact1.transform.position = lineRenderer1.GetPosition(1);
-                LaserImpact2.GetComponent<ParticleSystem>().Play();
-                LaserImpact2.transform.position = lineRenderer2.GetPosition(1);
+                // LaserImpact1.GetComponent<ParticleSystem>().Play();
+                // LaserImpact1.transform.position = lineRenderer1.GetPosition(1);
+                // LaserImpact2.GetComponent<ParticleSystem>().Play();
+                // LaserImpact2.transform.position = lineRenderer2.GetPosition(1);
+
+                GameObject effect = Instantiate(LaserImpact1, lineRenderer1.GetPosition(1), Quaternion.identity);
+                GameObject effect2 = Instantiate(LaserImpact1, lineRenderer2.GetPosition(1), Quaternion.identity);
                 //apply damage
                 if(hit1.collider.GetComponent<HealthSystem>())
                 {

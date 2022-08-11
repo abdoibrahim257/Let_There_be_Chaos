@@ -54,6 +54,7 @@ public class Spawning : MonoBehaviour
                 if (numSpawnObjects > 0)
                 {
                     GameObject spawned = Instantiate(spawnedObject[counter], transform.position, Quaternion.identity);
+                    spawned.GetComponent<AudioSource>().Play();
                     spawned.GetComponent<Rigidbody2D>().AddForce(this.transform.up * fireForce, ForceMode2D.Impulse);
                     counter++;
                     counter %= spawnedObject.Length;

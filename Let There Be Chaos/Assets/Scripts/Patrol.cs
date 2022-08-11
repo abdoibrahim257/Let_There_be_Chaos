@@ -57,6 +57,7 @@ public class Patrol : StateMachineBehaviour
         if (hit)
         {
             animator.SetBool("Chase", true);
+            animator.GetComponents<AudioSource>()[1].Play();
         }
     }
 }

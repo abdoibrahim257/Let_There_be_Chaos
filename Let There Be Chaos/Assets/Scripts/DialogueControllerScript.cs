@@ -20,6 +20,7 @@ public class DialogueControllerScript : MonoBehaviour
     public UnityEvent Event;
     void Start()
     {
+        GetComponents<AudioSource>()[1]?.Play();
         NextSentence();
     }
     void Update()
@@ -55,6 +56,7 @@ public class DialogueControllerScript : MonoBehaviour
 
     IEnumerator WriteSentence()
     {
+        GetComponents<AudioSource>()[0]?.Play();
         foreach(char c in Sentences[index].ToCharArray())
         {
             DialogueText.text +=c;
@@ -66,6 +68,7 @@ public class DialogueControllerScript : MonoBehaviour
                 break;
             }
         }
+        GetComponents<AudioSource>()[0]?.Stop();
         DialogueText.text = Sentences[index];
         first = true;
         index++;

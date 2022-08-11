@@ -16,6 +16,7 @@ public class DestroyInSeconds : MonoBehaviour
         if (DestroyEffect)      // lw fy destroy effect, e3mlo instantiate
         {
             GameObject effect = Instantiate(DestroyEffect, transform.position, Quaternion.identity);
+            effect.GetComponent<AudioSource>().Play();
         }
     }
 
